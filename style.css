@@ -1,0 +1,203 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fad0c4,#a18cd1);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.page{
+display:none;
+width:90%;
+max-width:700px;
+text-align:center;
+padding:40px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 10px 40px rgba(0,0,0,.25);
+animation:fade .8s;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-size:55px;
+color:white;
+margin-bottom:15px;
+}
+
+h2{
+color:white;
+margin:20px;
+font-size:35px;
+}
+
+p{
+color:white;
+font-size:20px;
+line-height:1.8;
+}
+
+button{
+margin-top:35px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff4081;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff0066;
+}
+
+/* PHOTO */
+
+.photo{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid white;
+margin:25px auto;
+display:block;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+/* ENVELOPE */
+
+.envelope{
+font-size:80px;
+animation:jump 1.5s infinite;
+}
+
+@keyframes jump{
+50%{
+transform:translateY(-12px);
+}
+}
+
+/* CAKE */
+
+.cake{
+position:relative;
+margin:60px auto;
+width:220px;
+height:220px;
+}
+
+.layer{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+border-radius:15px;
+}
+
+.layer1{
+bottom:0;
+width:220px;
+height:80px;
+background:#ff6f91;
+}
+
+.layer2{
+bottom:80px;
+width:180px;
+height:60px;
+background:#ff8fab;
+}
+
+.icing{
+position:absolute;
+bottom:140px;
+left:50%;
+transform:translateX(-50%);
+width:180px;
+height:20px;
+background:white;
+border-radius:20px;
+}
+
+.candle{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:160px;
+width:12px;
+height:50px;
+background:white;
+}
+
+.flame{
+position:absolute;
+top:-22px;
+left:50%;
+transform:translateX(-50%);
+width:18px;
+height:22px;
+background:gold;
+border-radius:50%;
+box-shadow:0 0 25px orange;
+animation:flicker .3s infinite alternate;
+}
+
+@keyframes flicker{
+from{
+transform:translateX(-50%) scale(1);
+}
+to{
+transform:translateX(-50%) scale(1.2);
+}
+}
+
+.emoji{
+font-size:60px;
+margin-top:25px;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-10px);
+}
+}
+
+#typing{
+min-height:120px;
+font-size:19px;
+margin-top:15px;
+}
